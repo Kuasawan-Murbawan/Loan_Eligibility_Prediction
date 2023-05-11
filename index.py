@@ -140,9 +140,9 @@ option = st.selectbox("Which feature selection methods do you want to use?", ("N
 #        st.write("You are not eligible")
 
 
-if option=="Non":
+if option=="No feature selection":
     non_display(option)
-elif option=="RFE":
+elif option=="Recursive Feature Elimination (RFE)":
     rfe_display(option)
-elif option=="PCA":
+elif option=="Principal Component Analysis (PCA)":
     pca_display(option)
