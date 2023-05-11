@@ -3,7 +3,17 @@ import joblib
 import pandas as pd
 import numpy as np
 
-st.title("Loan Eligibility Predictor")
+st.set_page_config(
+    st.title("Loan Eligibility Predictor")
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'https://github.com/Kuasawan-Murbawan',
+        'About': "# This is a header. This is an *extremely* cool app!"
+    }
+)
+
+
 
 # Function if the user choose no feature selection
 def non_display(option):
