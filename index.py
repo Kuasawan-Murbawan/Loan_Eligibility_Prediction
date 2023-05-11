@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 
 st.set_page_config(
-    st.title("Loan Eligibility Predictor")
+    st.title("Loan Eligibility Predictor"),
     layout="wide",
     initial_sidebar_state="expanded",
     menu_items={
