@@ -5,7 +5,7 @@ import numpy as np
 
 st.title("Loan Eligibility Predictor")
 
-
+# Function if the user choose no feature selection
 def non_display(option):
     st.write("Baseline accuracy with all features is 0.7916666666666666")
     reg_df_pred = pd.DataFrame([[Gender, Married, Dependents, Education, Self_Employed, ApplicantIncome, CoapplicantIncome, LoanAmount, Loan_Amount_Term, Credit_History, Property_Area]])
@@ -18,6 +18,7 @@ def non_display(option):
         else:
             st.write("You are not eligible")
    
+# function if the user choose RFE model
 def rfe_display(option):
     st.write("Accuracy with RFE and 6 features is 0.8333333333333334")
     st.write("The selected features are Gender, Married, Education, Self_Employed, Credit_History, Property_Area")
@@ -32,6 +33,8 @@ def rfe_display(option):
         else:
             st.write("You are not eligible")
 
+            
+ # option for PCA model
 def pca_display(option):
 
     # Import necessary libraries
@@ -90,15 +93,19 @@ def pca_display(option):
             st.write("You are not eligible")
 
     from PIL import Image
-
+    
+    
     image = Image.open(r"heatmap.png")
-
+    
     st.image(image, caption=' The values in the heatmap indicate the contribution of each original feature to each principal component. The values closer to 1 or -1 indicate a stronger contribution to the principal component, while values closer to 0 indicate a weaker contribution')
 
 
 
 
 st.divider()
+
+# User inputs
+
 col1, col2, col3 = st.columns(3)
 
 with col1:
@@ -127,7 +134,7 @@ with col3:
 
 st.divider()
 
-option = st.selectbox("Which feature selection methods do you want to use?", ("Non","RFE","PCA"))
+option = st.selectbox("Which feature selection methods do you want to use?", ("No feature selection","Recursive Feature Elimination (RFE)","Principal Component Analysis (PCA)"))
 
 #if st.button("Predict"):
 #        st.write("You are not eligible")
