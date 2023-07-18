@@ -33,7 +33,7 @@ We used 5 techniques as our feature selection methods, Recursive Feature Elimina
 ([Loan Prediction Feature Selection Code | Google Collab](https://colab.research.google.com/drive/1hqPVKwBrHwxPriaVLfFVZAR-uwiKuq6z?usp=sharing))
 
 ## Publishing to the web
-([Loan-Eligibility-Predictor | Streamlit]((https://kuasawan-murbawan-loan-eligibility-prediction-index-cgzl9m.streamlit.app/)))
+([Loan-Eligibility-Predictor | Streamlit](https://kuasawan-murbawan-loan-eligibility-prediction-index-cgzl9m.streamlit.app/))
 
 In this project, we have developed a machine learning model to predict certain outcomes based on user input data. The model was trained using various feature selection techniques but we only use 3 model to demo because the accuracy for most of the model is the same. We include no feature selection, Recursive Feature Elimination (RFE), and Principal Component Analysis (PCA). We then exported the models into pickle files using joblib.
 Interface:
